@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 page site</title>
+<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+	<style>
+		body {
+    background-color: #AF9FFF
+}
+		</style>
+<body>
+
+
+<!-- Main Container -->
+<div class="container"> 
+	
+		<style>
+		body {
+    background-color: #B8080B
+}
+		</style>
+  <!-- Navigation -->
+  <header> <a href="">
+    <h4 class="logo">Tates Portfolio</h4>
+    <img src="images/hrd.png" width="100" height="85" alt="picture of twitch emote, Trihard."/>  </a>
+    <nav>
+	
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="movies.html">MOVIES</a></li>
+        <li><a href="topic.html">TOPIC</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li> <a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+	
+	  	Bitmap vs Vector images:
+This 50-pixel bitmap image is on a background which is 100x100 pixels. Its file size is 30 KB:
+ 
+This 200-pixel bitmap image is on a background which is 400x400 pixels. Its file size is 469 KB (and is the same size whether the background is white or yellow):
+ 
+
+Note that if this 50-pixel bitmap image is enlarged in Word, the borders blur due to “antialiasing”:
+ 
+
+
+If the 50-pixel bitmap image is enlarged in paint, there is no antialiasing and the image will have sharp steps:
+ 
+
+The BMP files are much bigger than the other formats because EVERY PIXEL has a 3 BYTE colour:
+a.	The 50-pixel image has a border size of 100 x 100 = 10,000 pixels
+b.	The 200-pixel image has a border size of 400 x 400 = 160,000 pixels
+c.	The 600-pixel image has a border size of 1200 x 1200 = 1,440,000 pixels
+
+ 
+
+To see what’s in the 200 pixel BMP file, right click and "Open with" > "Notepad":
+ 
+ 
+The file will take a while to open and should look like this:
+ 
+
+If you paste all this into Word, it’s about 65 pages with 465,610 characters which is close to the 469 Bytes!!!
+ 
+
+To do the calculations, we have:
+Total pixels = 400 x 400 
+                      = 160,000 
+Total bytes ≈ 3 bytes per pixel
+                      ≈ 3 x 160,000 
+                      ≈ 480,000 Bytes
+                      ≈ 480 kilobytes
+
+A vector image can be expanded without distortion because it is a few lines of code such as those shown below:
+ 
+Example triangle01 specifies a path in the shape of a triangle. (The M indicates a moveto, the Ls indicate linetos, and the z indicates a closepath).
+ 
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="4cm" height="4cm" viewBox="0 0 400 400"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <title>Example triangle01- simple example of a 'path'</title>
+  <desc>A path that draws a triangle</desc>
+  <rect x="1" y="1" width="398" height="398"
+        fill="none" stroke="blue" />
+  <path d="M 100 100 L 300 100 L 200 300 z"
+        fill="red" stroke="blue" stroke-width="3" />
+</svg>
+
+ 
+Example triangle01
+View this example as SVG (SVG-enabled browsers only)
+ 
+Paths – SVG 1.1 (Second Edition)
+http://www.w3.org/TR/SVG/paths.html#PathDataClosePathCommand
+Screen clipping taken: 25/07/2018 8:39 PM 
+
+
+If the following code is copied into the <body> of your “multimedia” web page, you will see some amazing shapes. Alter the highlighted code to make your own shape:
+
+  <!-- <The code below is pasted from the Word instructions> -->
+  <!-- <<https://schoolsnsw.sharepoint.com/sites/IPT577/Notes_IPT/Graphics/Triangle_Bitmap_vs_Vector_images.docx>> -->
+
+		<!—1st image below taken from Paths – SVG 1.1 (Second Edition) -->
+<svg width="400" height="400" viewBox="0 0 400 400"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>A path that draws a triangle 200 pixels wide by 200 high</desc>
+  <rect x="2" y="2" width="396" height="396"
+        fill="LightYellow" stroke="black" stroke-width="4" />
+  <path fill="red" stroke="blue" stroke-width="2" 
+		d="M 100 100 L 300 100 L 200 300 z" />
+
+</svg>
+	  <h2>600 pixel vector triangle - still just 6 lines of code (about 360 characters, so less that half a kilobyte)</h2>
+		<!-- Code below taken from Paths – SVG 1.1 (Second Edition) -->
+	<!-- http://www.w3.org/TR/SVG/paths.html#PathDataClosePathCommand -->
+<svg width="800" height="800" viewBox="0 0 800 800"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>A path that draws a triangle 600 pixels wide by 600 high</desc>
+  <rect x="4" y="4" width="792" height="792"
+        fill="LightYellow" stroke="black" stroke-width="6"/>
+  <path d="M 100 100 L 700 100 L 400 700 z"
+        fill="red" stroke="blue" stroke-width="4" />
+</svg>	
+		  <h2>this is my modification of an SVG image:</h2>
+		<!-- Code below taken from Paths – SVG 1.1 (Second Edition) -->
+	<!-- http://www.w3.org/TR/SVG/paths.html#PathDataClosePathCommand -->
+<svg width="8cm" height="8cm" viewBox="0 0 800 800"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>Draw your own path</desc>
+  <path d="M 50 50 L 250 50"
+        fill="red" stroke="blue" stroke-width="20" />
+</svg>
+	
+<h2>A fancier vector drawing from GitHub - less than 40 lines of code (1048 characters, so around 1kb of file size)</h2>
+	  <h3>https://github.com/oreillymedia/Using_SVG/blob/master/ch01-overview-files/rasterization.svg</h3>
+<!-- SVG code -->
+<svg viewBox="0 0 480 350"
+     xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <style>
+        text {
+            font-family: Tahoma, sans-serif;
+            text-anchor: middle;
+            font-size: 18px;
+            fill: currentColor;
+        }
+        path {
+            stroke: dimgray; 
+            stroke-width: 4;
+            stroke-dasharray: 8 4;
+        }
+    </style>
+    <pattern id="low-res" patternUnits="userSpaceOnUse"
+             width="20" height="20">
+        <g id="dots">
+            <circle fill="red" r="5" cx="10" cy="5" />
+            <circle fill="lime" r="5" cx="5" cy="15" />
+            <circle fill="blue" r="5" cx="15" cy="15" />
+        </g>
+    </pattern>
+    <pattern id="high-res" patternUnits="userSpaceOnUse"
+             width="8" height="8" viewBox="0 0 20 20">
+        <use xlink:href="#dots" />
+    </pattern>
+    <g fill="url(#low-res)">
+        <text x="120" y="100%" dy="-1em" >Low-Resolution Display</text>
+        <path id="shape" 
+              d="M100,10 C200,0 300,250 120,200 S50,300 200,300 C0,200 0,20 100,10Z" />
+    </g>
+    <g transform="translate(240,0)" fill="url(#high-res)">
+        <text x="120" y="100%" dy="-1em" >High-Resolution Display</text>
+        <use xlink:href="#shape" />
+    </g>
+</svg>
+<!-- <End of the pasted code> -->
+	
+Back to bitmap images:
+This bitmap image is 200 x 200 pixels sitting on a canvas of 400 x 400 pixels:
+ 
+Here is a smaller graphic:
+ 
+
+Expanding in Paint can be done with the resize tool as 500% (5 times as big) and then again at 200% (10 times in all):
+ 
+Enlarging 10 times in Paint shows clear pixilation (aliasing):
+
+ 
+
+Enlarging in Word shows anti-aliasing:
+
+ 
+
+
+
+
+
+  <!-- Hero Section -->
+
+  <!-- About Section -->
+
+  <!-- Stats Gallery Section -->
+  
+  <!-- Parallax Section -->
+  <section class="banner">
+    <p class="parallax_description">ay lmao dab on the haters will is trash</p>
+  </section>
+  <!-- More Info Section -->
+  <footer>
+    <article class="footer_column">
+      <h3>ABOUT</h3>
+      <img src="images/tenor.gif" alt="" width="400" height="200" class="cards"/>
+      <p>i was wrong so horribly wrong this one is te left i dont know what to do. </p>
+    </article>
+    <article class="footer_column">
+      <h3>LOCATION</h3>
+      <img src="images/placeholder.jpg" alt="" width="400" height="200" class="cards"/>
+      <p>please is thie sleft of the right ples helpim aguess the left. </p>
+    </article>
+  </footer>
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+    <p class="hero_header">FOR THE LATEST NEWS &amp; UPDATES</p>
+    <div class="button">subscribe</div>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2015 - <strong>Light Theme</strong></div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>
